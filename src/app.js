@@ -75,15 +75,15 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function showPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=860949625d49936c19736b773a04ad68`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
 function showCurrentWeather(event) {
   event.preventDefault();
-  function showPosition(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=860949625d49936c19736b773a04ad68`;
-    axios.get(apiUrl).then(showTemperature);
-  }
-
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
