@@ -42,8 +42,20 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
-let apiKey = "860949625d49936c19736b773a04ad68";
-let city = "oslo";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(showTemperature);
+function search(city) {
+  let apiKey = "860949625d49936c19736b773a04ad68";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("London");
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
