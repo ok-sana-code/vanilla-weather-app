@@ -8,9 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="src/style.css">
 
     <title>Weather-App</title>
@@ -18,14 +16,14 @@
 
 <body>
     <div class="container">
-        <div class="weater-app">
+        <div class="weather-app shadow mb-5 rounded ">
 
             <form class="row">
-                <div class="form-group col-5">
+                <div class="form-group col-6">
                     <input type="text" class="form-control" placeholder="Tipe a city...">
                 </div>
-                <button type="submit" class="btn btn-primary col-2">Search</button>
-                <button type="submit" class="btn btn-primary col-2">Current</button>
+                <button type="submit" class="btn col-2">Search</button>
+                <button type="submit" class="btn col-2">Current</button>
 
             </form>
 
@@ -41,10 +39,24 @@
                     Clear
                 </li>
             </ul>
-            <div class="row">
+            <div class="description row">
                 <div class="col-6">
-                    <img src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card/SunnyDayV3.svg" alt="clear">
-                    12 °C | °F
+                    <img class="weather-icon"
+                        src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card/SunnyDayV3.svg" alt="clear">
+                    <span class="temperature">
+                        12
+                    </span>
+                    <span class="units">
+                        <span class="metric">
+                            °C
+                        </span>
+                        |
+                        <span class="imperial">
+                            °F
+                        </span>
+
+                    </span>
+
                 </div>
                 <div class="col-6">
                     <ul>
@@ -58,17 +70,17 @@
                 </div>
 
             </div>
-
+            <small>
+                <a href="https://github.com/ok-sana-code/vanilla-weather-app" target="_blank">
+                    Open-source code
+                </a>
+                , by Oksana Shvets from
+                <a href="https://www.shecodes.io/" target=_blank>
+                    She Codes
+                </a>
+            </small>
         </div>
-        <small>
-            <a href="https://github.com/ok-sana-code/vanilla-weather-app" target="_blank">
-                Open-source code
-            </a>
-            , by Oksana Shvets from
-            <a href="https://www.shecodes.io/" target=_blank>
-                She Codes
-            </a>
-        </small>
+
     </div>
     <script src="src/app.js"></script>
 </body>

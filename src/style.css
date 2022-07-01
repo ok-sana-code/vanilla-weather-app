@@ -1,1 +1,48 @@
+body {
+  background-color: #214e8e;
+  color: white;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 0;
+}
 
+.weather-app {
+  max-width: 600px;
+  background-color: #335898;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.btn {
+  background-color: #6491cd;
+  border: 1px solid white;
+  color: white;
+  margin-left: 10px;
+}
+/* .description {
+ 
+} */
+
+.weather-icon {
+  position: relative;
+  bottom: 10px;
+}
+.temperature {
+  font-size: 50px;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: -20px;
+}
