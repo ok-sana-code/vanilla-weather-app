@@ -10,6 +10,7 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Weather-App</title>
 </head>
@@ -28,23 +29,19 @@
             </form>
 
 
-            <h1>
-                London
-            </h1>
+            <h1 id="city"></h1>
             <ul>
                 <li>
                     Friday 05:00
                 </li>
-                <li>
-                    Clear
-                </li>
+                <li id="description"></li>
             </ul>
             <div class="description row">
                 <div class="col-6">
                     <img class="weather-icon"
                         src="https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card/SunnyDayV3.svg" alt="clear">
-                    <span class="temperature">
-                        12
+                    <span id="temperature">
+
                     </span>
                     <span class="units">
                         <span class="metric">
@@ -61,10 +58,10 @@
                 <div class="col-6">
                     <ul>
                         <li>
-                            Humidity: 73%
+                            Humidity: <span id="humidity"></span>%
                         </li>
                         <li>
-                            Wind: 2km/h
+                            Wind: <span id="wind"></span>km/h
                         </li>
                     </ul>
                 </div>
