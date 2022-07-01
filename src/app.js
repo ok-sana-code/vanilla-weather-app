@@ -2,11 +2,11 @@ function formatDate(timestamp) {
   let date = new Date();
   let hours = date.getHours();
   if (hours < 10) {
-    hours === `0${hours}`;
+    hours = `0${hours}`;
   }
   let minutes = date.getMinutes();
   if (minutes < 10) {
-    hours === `0${minutes}`;
+    minutes = `0${minutes}`;
   }
   let days = [
     "Sunday",
@@ -85,5 +85,19 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+function showCurrentWeather(event) {
+  event.preventDefault();
+  function showPosition(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=860949625d49936c19736b773a04ad68`;
+    axios.get(apiUrl).then(showTemperature);
+  }
+
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+let current = document.querySelector("#current");
+current.addEventListener("click", showCurrentWeather);
 
 search("London");
