@@ -33,7 +33,7 @@ li {
  
 } */
 
-.weather-icon {
+#icon {
   position: relative;
   bottom: 10px;
 }
