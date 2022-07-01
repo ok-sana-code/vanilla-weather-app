@@ -44,5 +44,14 @@ li {
 
 .units {
   position: relative;
-  top: -20px;
+  top: -25px;
+}
+
+.units a {
+  text-decoration: none;
+  color: #6491cd;
+}
+.units .active {
+  color: white;
+  cursor: default;
 }
