@@ -1,5 +1,6 @@
 body {
-  background-color: #214e8e;
+  background-image: url("../img/skynews-sun-weather.jpg");
+  /* background-color: #214e8e; */
   color: white;
 }
 a {
@@ -18,7 +19,7 @@ li {
 
 .weather-app {
   max-width: 600px;
-  background-color: #335898;
+  background-color: #4c79c65b;
   margin: 30px auto;
   padding: 20px;
 }
